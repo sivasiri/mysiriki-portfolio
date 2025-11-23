@@ -121,28 +121,8 @@ const technologies = [
     icon: reactjs,
   },
   {
-    name: "Node JS",
-    icon: nodejs,
-  },
-  {
-    name: "Express Js",
-    icon: express,
-  },
-  {
     name: "MySql",
     icon: mysql,
-  },
-  {
-    name: "MongoDB",
-    icon: mongodb,
-  },
-  {
-    name: "AWS",
-    icon: aws,
-  },
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
   },
   {
     name: "Git",
@@ -155,6 +135,10 @@ const technologies = [
   {
     name: "GSAP",
     icon: gsap,
+  },
+  {
+    name: "Tailwind CSS",
+    icon: tailwind,
   },
 ];
 
