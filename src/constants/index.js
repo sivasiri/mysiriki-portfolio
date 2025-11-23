@@ -70,12 +70,12 @@ const services = [
     icon: backend,
   },
   {
-    title: "Full-Stack Developer",
-    icon: mobile,
-  },
-  {
     title: "CMS Specialist",
     icon: creator,
+  },
+  {
+    title: "Frontend Developer",
+    icon: mobile,
   },
 ];
 
@@ -93,12 +93,28 @@ const technologies = [
     icon: javascript,
   },
   {
+    name: "Bootstrap",
+    icon: css,
+  },
+  {
+    name: "jQuery",
+    icon: javascript,
+  },
+  {
+    name: "WordPress",
+    icon: web,
+  },
+  {
     name: "Java",
-    icon: nodejs, // Placeholder - replace with Java icon
+    icon: nodejs,
   },
   {
     name: "Spring Boot",
-    icon: express, // Placeholder - replace with Spring Boot icon
+    icon: express,
+  },
+  {
+    name: "REST APIs",
+    icon: backend,
   },
   {
     name: "React JS",
@@ -111,10 +127,6 @@ const technologies = [
   {
     name: "Express Js",
     icon: express,
-  },
-  {
-    name: "REST APIs",
-    icon: backend,
   },
   {
     name: "MySql",
@@ -131,18 +143,6 @@ const technologies = [
   {
     name: "Tailwind CSS",
     icon: tailwind,
-  },
-  {
-    name: "Bootstrap",
-    icon: css, // Placeholder
-  },
-  {
-    name: "jQuery",
-    icon: javascript, // Placeholder
-  },
-  {
-    name: "WordPress",
-    icon: web, // Placeholder
   },
   {
     name: "Git",

@@ -1,11 +1,11 @@
 export const personalData = {
   name: "Surya Sai Siva Krishna Siriki",
-  role: "Full Stack Java Developer | Cloud & AI Enthusiast",
-  heroTagline: "I build full-stack, cloud-native apps powered by AI, crafted with clean code & creativity ✨",
-  bio: "I'm a passionate Full Stack Java Developer with 4+ years of experience designing microservices, integrating AI/ML workflows, and delivering scalable web solutions. I specialize in Java 17, Spring Boot, React, Kafka, and cloud platforms like AWS and GCP. My work blends backend logic, AI integration, and modern UI/UX to build products that matter.",
+  role: "Web Content Administrator & Java Developer",
+  heroTagline: "I design, structure, and optimize web content with a focus on accessibility, SEO, and user experience ✨",
+  bio: "Enthusiastic and detail-oriented Web Content Administrator and Java Developer with around 2 years of experience in content management systems, website architecture, and web project coordination. Skilled in designing, structuring, and optimizing web and intranet content with a strong foundation in HTML, CSS, and accessibility standards. Experienced in Java-based backend development and delivering information-centric solutions during academic and professional projects. Passionate about improving digital experiences, driving belonging initiatives, and supporting institutional strategic goals.",
   
   location: "United States",
-  email: "siva.k.siriki@gmail.com",
+  email: "surya.sai.sk.s@gmail.com",
   phone: "+1 (309) 315-8067",
 
   github: "https://github.com/sivasiri",
@@ -18,7 +18,7 @@ export const personalData = {
     instagram: "https://instagram.com/YOUR_USERNAME", // optional
   },
 
-  interests: ["AI Agents", "Edge Computing", "Blockchain", "Clean UI", "System Design"],
+  interests: ["Web Usability", "SEO", "Information Architecture", "Accessibility", "Responsive Design"],
 
   avatar: "/avatar.png", // drop your image in public folder as avatar.png
 };
