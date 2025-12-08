@@ -13,10 +13,11 @@ import {
   project2,
   project3,
   mysql,
+  postgresql,
   express,
   aws,
+  docker,
   mui,
-  
   gsap,
   framer,
   figma,
@@ -29,6 +30,27 @@ import {
   redux,
   tailwind,
   threejs,
+  typescript,
+  java,
+  springboot,
+  python,
+  angular,
+  redis,
+  kafka,
+  gcp,
+  oracle,
+  cassandra,
+  kubernetes,
+  terraform,
+  helm,
+  circleci,
+  prometheus,
+  grafana,
+  dynatrace,
+  d3js,
+  junit,
+  sonarqube,
+  argocd,
   firstTestimonial,
   secondTestimonial,
   thirdTestimonial,
@@ -80,17 +102,47 @@ const services = [
 ];
 
 const technologies = [
+  // Programming Languages
   {
     name: "Java",
-    icon: nodejs,
+    icon: java,
   },
   {
+    name: "SQL",
+    icon: mysql,
+  },
+  {
+    name: "JavaScript",
+    icon: javascript,
+  },
+  {
+    name: "TypeScript",
+    icon: typescript,
+  },
+  {
+    name: "Python",
+    icon: python,
+  },
+  // Backend & Frameworks
+  {
     name: "Spring Boot",
-    icon: express,
+    icon: springboot,
+  },
+  {
+    name: "Spring MVC",
+    icon: springboot,
   },
   {
     name: "Spring Security",
+    icon: springboot,
+  },
+  {
+    name: "JWT",
     icon: backend,
+  },
+  {
+    name: "Spring Data JPA",
+    icon: springboot,
   },
   {
     name: "REST APIs",
@@ -100,6 +152,7 @@ const technologies = [
     name: "Microservices",
     icon: web,
   },
+  // Frontend
   {
     name: "React",
     icon: reactjs,
@@ -109,20 +162,46 @@ const technologies = [
     icon: redux,
   },
   {
-    name: "JavaScript",
-    icon: javascript,
+    name: "HTML5",
+    icon: html,
   },
   {
-    name: "TypeScript",
-    icon: javascript,
+    name: "CSS3",
+    icon: css,
   },
+  {
+    name: "Angular",
+    icon: angular,
+  },
+  {
+    name: "D3.js",
+    icon: d3js,
+  },
+  // Cloud Platforms
+  {
+    name: "GCP",
+    icon: gcp,
+  },
+  {
+    name: "AWS",
+    icon: aws,
+  },
+  // Databases
   {
     name: "PostgreSQL",
-    icon: mysql,
+    icon: postgresql,
   },
   {
     name: "MySQL",
     icon: mysql,
+  },
+  {
+    name: "Oracle",
+    icon: oracle,
+  },
+  {
+    name: "Cassandra",
+    icon: cassandra,
   },
   {
     name: "MongoDB",
@@ -130,35 +209,75 @@ const technologies = [
   },
   {
     name: "Redis",
-    icon: mongodb,
+    icon: redis,
   },
+  // Messaging & Streaming
   {
     name: "Apache Kafka",
-    icon: backend,
+    icon: kafka,
   },
   {
-    name: "GCP",
-    icon: aws,
+    name: "GCP Pub/Sub",
+    icon: gcp,
   },
-  {
-    name: "AWS",
-    icon: aws,
-  },
-  {
-    name: "Kubernetes",
-    icon: backend,
-  },
-  {
-    name: "Docker",
-    icon: backend,
-  },
-  {
-    name: "Terraform",
-    icon: backend,
-  },
+  // CI/CD & DevOps
   {
     name: "Git",
     icon: git,
+  },
+  {
+    name: "GitHub Actions",
+    icon: git,
+  },
+  {
+    name: "Argo CD",
+    icon: argocd,
+  },
+  {
+    name: "CircleCI",
+    icon: circleci,
+  },
+  {
+    name: "Terraform",
+    icon: terraform,
+  },
+  {
+    name: "Helm",
+    icon: helm,
+  },
+  {
+    name: "Docker",
+    icon: docker,
+  },
+  {
+    name: "Kubernetes",
+    icon: kubernetes,
+  },
+  // Testing & Code Quality
+  {
+    name: "JUnit 5",
+    icon: junit,
+  },
+  {
+    name: "Mockito",
+    icon: junit,
+  },
+  {
+    name: "SonarQube",
+    icon: sonarqube,
+  },
+  // Monitoring & Logging
+  {
+    name: "Prometheus",
+    icon: prometheus,
+  },
+  {
+    name: "Grafana",
+    icon: grafana,
+  },
+  {
+    name: "Dynatrace",
+    icon: dynatrace,
   },
 ];
 
