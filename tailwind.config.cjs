@@ -18,6 +18,10 @@ module.exports = {
       screens: {
         xs: "450px",
       },
+      gridTemplateColumns: {
+        '16': 'repeat(16, minmax(0, 1fr))',
+        '20': 'repeat(20, minmax(0, 1fr))',
+      },
       backgroundImage: {
         "hero-pattern": "url('/src/assets/herobg.png')",
       },
