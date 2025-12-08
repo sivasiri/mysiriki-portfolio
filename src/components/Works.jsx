@@ -48,15 +48,14 @@ const ProjectCard = ({
   }, []);
 
   return (
-    <div ref={cardRef}>
+    <div ref={cardRef} onClick={onClick} className="cursor-pointer">
       <Tilt
         options={{
           max: 45,
           scale: 1,
           speed: 450,
         }}
-        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full cursor-pointer"
-        onClick={onClick}
+        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
       >
         <div className="relative w-full h-[230px]">
           <img
@@ -130,6 +129,7 @@ const Works = () => {
   }, []);
 
   const handleProjectClick = (project) => {
+    console.log("Project clicked:", project);
     setSelectedProject(project);
     setIsModalOpen(true);
   };

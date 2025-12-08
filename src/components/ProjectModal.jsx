@@ -22,8 +22,6 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
     };
   }, [isOpen, onClose]);
 
-  if (!project) return null;
-
   const techIcons = {
     "Java": java,
     "Spring Boot": springboot,
@@ -35,12 +33,20 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
     "GCP": gcp,
   };
 
+  useEffect(() => {
+    if (isOpen && project) {
+      console.log("Modal is opening with project:", project.name);
+    }
+  }, [isOpen, project]);
+
+  if (!project || !isOpen) return null;
+
   const features = project.features || [];
   const techStack = project.techStack || [];
 
   return (
-    <AnimatePresence>
-      {isOpen && (
+    <AnimatePresence mode="wait">
+      {isOpen && project && (
         <>
           {/* Backdrop */}
           <motion.div
@@ -48,7 +54,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
-            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-[9999] flex items-center justify-center p-4"
           >
             {/* Modal Content */}
             <motion.div
