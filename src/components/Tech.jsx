@@ -35,16 +35,28 @@ const Tech = () => {
     }
   };
 
+  // Calculate columns for 2 rows (approximately half the technologies per row)
+  const columnsPerRow = Math.ceil(technologies.length / 2);
+
   return (
     <section>
-      <div className="tech-icons-wrapper flex flex-wrap justify-center gap-4 md:gap-6 max-w-7xl mx-auto px-4">
+      <div 
+        className="tech-icons-wrapper max-w-7xl mx-auto px-4"
+        style={{ 
+          display: 'grid',
+          gridTemplateColumns: `repeat(${columnsPerRow}, minmax(60px, 1fr))`,
+          gap: '1rem',
+          justifyContent: 'center',
+          alignItems: 'center'
+        }}
+      >
         {technologies.map((technology) => (
           <a
             href={technology.url}
             target="_blank"
             rel="noopener noreferrer"
             key={technology.name}
-            className="w-14 h-14 md:w-16 md:h-16 cursor-pointer transition-all duration-300 hover:scale-125 hover:opacity-90 flex items-center justify-center group"
+            className="w-12 h-12 md:w-14 md:h-14 cursor-pointer transition-all duration-300 hover:scale-125 hover:opacity-90 flex items-center justify-center group mx-auto"
             title={technology.name}
           >
             <img
