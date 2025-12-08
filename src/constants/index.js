@@ -106,178 +106,220 @@ const technologies = [
   {
     name: "Java",
     icon: java,
+    url: "https://www.java.com",
   },
   {
     name: "SQL",
     icon: mysql,
+    url: "https://www.mysql.com",
   },
   {
     name: "JavaScript",
     icon: javascript,
+    url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
   },
   {
     name: "TypeScript",
     icon: typescript,
+    url: "https://www.typescriptlang.org",
   },
   {
     name: "Python",
     icon: python,
+    url: "https://www.python.org",
   },
   // Backend & Frameworks
   {
     name: "Spring Boot",
     icon: springboot,
+    url: "https://spring.io/projects/spring-boot",
   },
   {
     name: "Spring MVC",
     icon: springboot,
+    url: "https://spring.io/guides/gs/serving-web-content",
   },
   {
     name: "Spring Security",
     icon: springboot,
+    url: "https://spring.io/projects/spring-security",
   },
   {
     name: "JWT",
     icon: backend,
+    url: "https://jwt.io",
   },
   {
     name: "Spring Data JPA",
     icon: springboot,
+    url: "https://spring.io/projects/spring-data-jpa",
   },
   {
     name: "REST APIs",
     icon: backend,
+    url: "https://restfulapi.net",
   },
   {
     name: "Microservices",
     icon: web,
+    url: "https://microservices.io",
   },
   // Frontend
   {
     name: "React",
     icon: reactjs,
+    url: "https://react.dev",
   },
   {
     name: "Redux",
     icon: redux,
+    url: "https://redux.js.org",
   },
   {
     name: "HTML5",
     icon: html,
+    url: "https://developer.mozilla.org/en-US/docs/Web/HTML",
   },
   {
     name: "CSS3",
     icon: css,
+    url: "https://developer.mozilla.org/en-US/docs/Web/CSS",
   },
   {
     name: "Angular",
     icon: angular,
+    url: "https://angular.io",
   },
   {
     name: "D3.js",
     icon: d3js,
+    url: "https://d3js.org",
   },
   // Cloud Platforms
   {
     name: "GCP",
     icon: gcp,
+    url: "https://cloud.google.com",
   },
   {
     name: "AWS",
     icon: aws,
+    url: "https://aws.amazon.com",
   },
   // Databases
   {
     name: "PostgreSQL",
     icon: postgresql,
+    url: "https://www.postgresql.org",
   },
   {
     name: "MySQL",
     icon: mysql,
+    url: "https://www.mysql.com",
   },
   {
     name: "Oracle",
     icon: oracle,
+    url: "https://www.oracle.com/database",
   },
   {
     name: "Cassandra",
     icon: cassandra,
+    url: "https://cassandra.apache.org",
   },
   {
     name: "MongoDB",
     icon: mongodb,
+    url: "https://www.mongodb.com",
   },
   {
     name: "Redis",
     icon: redis,
+    url: "https://redis.io",
   },
   // Messaging & Streaming
   {
     name: "Apache Kafka",
     icon: kafka,
+    url: "https://kafka.apache.org",
   },
   {
     name: "GCP Pub/Sub",
     icon: gcp,
+    url: "https://cloud.google.com/pubsub",
   },
   // CI/CD & DevOps
   {
     name: "Git",
     icon: git,
+    url: "https://git-scm.com",
   },
   {
     name: "GitHub Actions",
     icon: git,
+    url: "https://github.com/features/actions",
   },
   {
     name: "Argo CD",
     icon: argocd,
+    url: "https://argo-cd.readthedocs.io",
   },
   {
     name: "CircleCI",
     icon: circleci,
+    url: "https://circleci.com",
   },
   {
     name: "Terraform",
     icon: terraform,
+    url: "https://www.terraform.io",
   },
   {
     name: "Helm",
     icon: helm,
+    url: "https://helm.sh",
   },
   {
     name: "Docker",
     icon: docker,
+    url: "https://www.docker.com",
   },
   {
     name: "Kubernetes",
     icon: kubernetes,
+    url: "https://kubernetes.io",
   },
   // Testing & Code Quality
   {
     name: "JUnit 5",
     icon: junit,
+    url: "https://junit.org/junit5",
   },
   {
     name: "Mockito",
     icon: junit,
+    url: "https://site.mockito.org",
   },
   {
     name: "SonarQube",
     icon: sonarqube,
+    url: "https://www.sonarqube.org",
   },
   // Monitoring & Logging
   {
     name: "Prometheus",
     icon: prometheus,
+    url: "https://prometheus.io",
   },
   {
     name: "Grafana",
     icon: grafana,
+    url: "https://grafana.com",
   },
   {
     name: "Dynatrace",
     icon: dynatrace,
+    url: "https://www.dynatrace.com",
   },
 ];
 

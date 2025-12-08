@@ -15,10 +15,6 @@ const Tech = () => {
         y: 80
       },
       {
-
-
-
-        
         opacity: 1,
         y: 0,
         duration: 2.5,
@@ -33,17 +29,30 @@ const Tech = () => {
     );
   }, []);
 
+  const handleTechClick = (url) => {
+    if (url) {
+      window.open(url, '_blank', 'noopener,noreferrer');
+    }
+  };
+
   return (
     <section>
-      <div className="tech-icons-wrapper flex flex-row flex-wrap justify-center gap-10">
+      <div className="tech-icons-wrapper grid grid-cols-10 md:grid-cols-15 lg:grid-cols-20 gap-3 md:gap-4 justify-center items-center max-w-7xl mx-auto px-4">
         {technologies.map((technology) => (
-          <div className="w-28 h-28" key={technology.name}>
+          <a
+            href={technology.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            key={technology.name}
+            className="w-12 h-12 md:w-14 md:h-14 cursor-pointer transition-all duration-300 hover:scale-125 hover:opacity-90 flex items-center justify-center group"
+            title={technology.name}
+          >
             <img
               src={technology.icon}
               alt={technology.name}
               className="tech-icon w-full h-full object-contain"
             />
-          </div>
+          </a>
         ))}
       </div>
     </section>
