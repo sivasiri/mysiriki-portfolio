@@ -38,9 +38,8 @@ import {
 // Import company logos
 import accenture from "../assets/company/accenture.png";
 import wiu from "../assets/company/wiu.png";
-// Placeholder logos for Discover and Charles River
-import meta from "../assets/company/meta.png";
-import shopify from "../assets/company/shopify.png";
+import discover from "../assets/company/discover.png";
+import charlesriver from "../assets/company/charlesriver.png";
 
 
 export const navLinks = [
@@ -167,7 +166,7 @@ const experiences = [
   {
     title: "Java Developer",
     company_name: "Discover",
-    icon: meta, // Placeholder - replace with Discover logo
+    icon: discover,
     iconBg: "#FF6B35",
     date: "November 2024 - Present",
     points: [
@@ -206,7 +205,7 @@ const experiences = [
   {
     title: "Application Developer",
     company_name: "Charles River Laboratories",
-    icon: shopify, // Placeholder - replace with Charles River logo
+    icon: charlesriver,
     iconBg: "#1A1A2E",
     date: "August 2019 - September 2021",
     points: [
