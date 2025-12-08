@@ -48,7 +48,7 @@ const ProjectCard = ({
   }, []);
 
   return (
-    <div ref={cardRef} onClick={onClick} className="cursor-pointer">
+    <div ref={cardRef} onClick={onClick} className="cursor-pointer w-full">
       <Tilt
         options={{
           max: 45,
@@ -56,6 +56,7 @@ const ProjectCard = ({
           speed: 450,
         }}
         className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
+        style={{ pointerEvents: 'auto' }}
       >
         <div className="relative w-full h-[230px]">
           <img
@@ -153,15 +154,19 @@ const Works = () => {
       </div>
 
       <div className="works-container mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-5">
-        {projects.map((project, index) => (
-          <div key={`project-${index}`} className="project-card">
-            <ProjectCard 
-              index={index} 
-              {...project} 
-              onClick={() => handleProjectClick(project)}
-            />
-          </div>
-        ))}
+        {projects && projects.length > 0 ? (
+          projects.map((project, index) => (
+            <div key={`project-${index}`} className="project-card">
+              <ProjectCard 
+                index={index} 
+                {...project} 
+                onClick={() => handleProjectClick(project)}
+              />
+            </div>
+          ))
+        ) : (
+          <p className="text-secondary">No projects available</p>
+        )}
       </div>
 
       <ProjectModal
