@@ -426,8 +426,59 @@ const testimonials = [
 const projects = [
   {
     name: "Smart Waste Management & Recycling Tracker",
+    subtitle: "Full-Stack Web Application with AI-Powered Waste Classification",
     description:
-      "Developed a full-stack web application using Java Spring Boot, React, and MongoDB. Implemented AI-based waste classification using barcode and image recognition. Enabled real-time garbage collection alerts and recycling center mapping. Gamified user participation through an eco-score system and leaderboard. Provided analytics for city officials to monitor recycling habits and performance.",
+      "A comprehensive full-stack platform that empowers citizens and municipalities to manage waste more effectively through AI-based categorization, real-time alerts, and gamified recycling participation.",
+    detailedDescription:
+      "The Smart Waste Management & Recycling Tracker is a scalable, secure platform built using Spring Boot and MongoDB with a RESTful architecture. The project implements industry-standard practices including JWT security, modular services, and clean, maintainable code. It features AI-based waste categorization using TensorFlow/OpenCV, real-time garbage collection alerts via SMS/email, recycling center mapping with Google Maps integration, and a gamified eco-score system with leaderboards to encourage sustainable practices.",
+    features: [
+      "Secure user authentication with JWT token generation and Spring Security",
+      "AI-based waste classification using barcode and image recognition (TensorFlow/OpenCV)",
+      "Real-time garbage collection alerts via SMS/email using Twilio",
+      "Interactive recycling center locator with Google Maps API integration",
+      "Gamified eco-score system with badges and monthly leaderboards",
+      "User profile management with profile picture uploads",
+      "Analytics dashboard for city officials to monitor recycling habits",
+      "Community campaigns and contribution tracking",
+      "RESTful API architecture with MongoDB database integration",
+      "File upload functionality with size limits and secure storage",
+    ],
+    techStack: [
+      "Java",
+      "Spring Boot",
+      "React",
+      "MongoDB",
+      "Python",
+      "Docker",
+      "Kubernetes",
+      "GCP",
+    ],
+    phases: [
+      {
+        title: "Phase 1: Authentication & Basic Setup",
+        description: "Implemented secure user registration, JWT-based authentication, MongoDB integration, and Spring Security configuration with Postman testing.",
+      },
+      {
+        title: "Phase 2: User Profile Management",
+        description: "Built user profile endpoints, profile picture uploads, and secure file storage with MongoDB document management.",
+      },
+      {
+        title: "Phase 3: AI Waste Categorization",
+        description: "Integrated TensorFlow/OpenCV for image-based waste classification, categorizing waste as plastic, organic, metal, etc.",
+      },
+      {
+        title: "Phase 4: Garbage Collection Alerts",
+        description: "Developed scheduled collection date system with SMS/email alerts using Twilio for timely notifications.",
+      },
+      {
+        title: "Phase 5: Recycling Center Locator",
+        description: "Integrated Google Maps API to show nearby recycling centers for each waste type with directions and navigation support.",
+      },
+      {
+        title: "Phase 6: Gamification & Analytics",
+        description: "Implemented eco-score tracking, badges, monthly leaderboards, community campaigns, and analytics dashboards for city officials.",
+      },
+    ],
     tags: [
       {
         name: "Java",
@@ -449,9 +500,17 @@ const projects = [
         name: "AI/ML",
         color: "blue-text-gradient",
       },
+      {
+        name: "Full-Stack",
+        color: "green-text-gradient",
+      },
+      {
+        name: "REST API",
+        color: "pink-text-gradient",
+      },
     ],
     image: project2,
-    source_code_link: "https://github.com/sivasiri",
+    source_code_link: "https://github.com/sivasiri/Smart-Waste-Management-and-recycling-tracker",
   },
 ];
 

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Tilt } from "react-tilt";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -7,6 +7,7 @@ import { styles } from "../styles";
 import { github } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
+import ProjectModal from "./ProjectModal";
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -18,6 +19,7 @@ const ProjectCard = ({
   tags,
   image,
   source_code_link,
+  onClick,
 }) => {
   const cardRef = useRef(null);
 
@@ -53,7 +55,8 @@ const ProjectCard = ({
           scale: 1,
           speed: 450,
         }}
-        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
+        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full cursor-pointer"
+        onClick={onClick}
       >
         <div className="relative w-full h-[230px]">
           <img
@@ -64,8 +67,11 @@ const ProjectCard = ({
 
           <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
             <div
-              onClick={() => window.open(source_code_link, "_blank")}
-              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+              onClick={(e) => {
+                e.stopPropagation();
+                window.open(source_code_link, "_blank");
+              }}
+              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer hover:scale-110 transition-transform"
             >
               <img
                 src={github}
@@ -97,6 +103,9 @@ const ProjectCard = ({
 };
 
 const Works = () => {
+  const [selectedProject, setSelectedProject] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   useEffect(() => {
     // Stagger effect for project cards
     gsap.fromTo(
@@ -120,6 +129,16 @@ const Works = () => {
     );
   }, []);
 
+  const handleProjectClick = (project) => {
+    setSelectedProject(project);
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setTimeout(() => setSelectedProject(null), 300); // Delay to allow exit animation
+  };
+
   return (
     <>
       <div>
@@ -136,10 +155,20 @@ const Works = () => {
       <div className="works-container mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-5">
         {projects.map((project, index) => (
           <div key={`project-${index}`} className="project-card">
-            <ProjectCard index={index} {...project} />
+            <ProjectCard 
+              index={index} 
+              {...project} 
+              onClick={() => handleProjectClick(project)}
+            />
           </div>
         ))}
       </div>
+
+      <ProjectModal
+        project={selectedProject}
+        isOpen={isModalOpen}
+        onClose={handleCloseModal}
+      />
     </>
   );
 };
