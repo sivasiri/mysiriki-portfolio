@@ -135,24 +135,9 @@ const technologies = [
     url: "https://spring.io/projects/spring-boot",
   },
   {
-    name: "Spring MVC",
-    icon: springboot,
-    url: "https://spring.io/guides/gs/serving-web-content",
-  },
-  {
-    name: "Spring Security",
-    icon: springboot,
-    url: "https://spring.io/projects/spring-security",
-  },
-  {
     name: "JWT",
     icon: backend,
     url: "https://jwt.io",
-  },
-  {
-    name: "Spring Data JPA",
-    icon: springboot,
-    url: "https://spring.io/projects/spring-data-jpa",
   },
   {
     name: "REST APIs",
@@ -242,11 +227,6 @@ const technologies = [
     name: "Apache Kafka",
     icon: kafka,
     url: "https://kafka.apache.org",
-  },
-  {
-    name: "GCP Pub/Sub",
-    icon: gcp,
-    url: "https://cloud.google.com/pubsub",
   },
   // CI/CD & DevOps
   {
