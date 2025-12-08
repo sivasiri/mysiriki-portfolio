@@ -1,11 +1,11 @@
 export const personalData = {
   name: "Surya Sai Siva Krishna Siriki",
-  role: "Web Content Administrator & Java Developer",
-  heroTagline: "I design, structure, and optimize web content with a focus on accessibility, SEO, and user experience ✨",
-  bio: "Enthusiastic and detail-oriented Web Content Administrator and Java Developer with around 2 years of experience in content management systems, website architecture, and web project coordination. Skilled in designing, structuring, and optimizing web and intranet content with a strong foundation in HTML, CSS, and accessibility standards. Experienced in Java-based backend development and delivering information-centric solutions during academic and professional projects. Passionate about improving digital experiences, driving belonging initiatives, and supporting institutional strategic goals.",
+  role: "Java Developer",
+  heroTagline: "Building secure, scalable backend systems and cloud-native microservices that power global transactions ✨",
+  bio: "Experienced Java Developer with around 5 years of hands-on work building secure, scalable backend systems and cloud-native microservices. Strong background in designing REST APIs, processing high-volume data workflows, and improving system performance across enterprise environments. Worked on mission-critical financial, retail, and scientific platforms, delivering reliable services that power global transactions and data pipelines. Skilled in cloud deployments, containerized applications, asynchronous messaging, and end-to-end debugging across distributed systems. A collaborative engineer known for clean coding practices, proactive problem-solving, and consistent delivery within Agile teams.",
   
   location: "United States",
-  email: "surya.sai.sk.s@gmail.com",
+  email: "siva.k.siriki@gmail.com",
   phone: "+1 (309) 315-8067",
 
   github: "https://github.com/sivasiri",
@@ -18,7 +18,7 @@ export const personalData = {
     instagram: "https://instagram.com/YOUR_USERNAME", // optional
   },
 
-  interests: ["Web Usability", "SEO", "Information Architecture", "Accessibility", "Responsive Design"],
+  interests: ["Microservices", "Cloud Architecture", "Distributed Systems", "API Design", "System Performance"],
 
   avatar: "/avatar.png", // drop your image in public folder as avatar.png
 };

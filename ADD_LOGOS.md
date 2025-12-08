@@ -60,3 +60,5 @@ cp /path/to/wiu.png src/assets/company/wiu.png
 - Optimal size: 200x200px to 400x400px
 - The logos will be automatically resized in the UI
 
+
+

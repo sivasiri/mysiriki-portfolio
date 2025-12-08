@@ -36,10 +36,11 @@ import {
 
 
 // Import company logos
-import tekisky from "../assets/company/tekisky.png";
-// Company logos - add accenture.png and wiu.png to /src/assets/company/ folder
 import accenture from "../assets/company/accenture.png";
 import wiu from "../assets/company/wiu.png";
+// Placeholder logos for Discover and Charles River
+import meta from "../assets/company/meta.png";
+import shopify from "../assets/company/shopify.png";
 
 
 export const navLinks = [
@@ -62,48 +63,24 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Content Administrator",
-    icon: web,
-  },
-  {
     title: "Java Developer",
     icon: backend,
   },
   {
-    title: "CMS Specialist",
-    icon: creator,
+    title: "Backend Developer",
+    icon: web,
   },
   {
-    title: "Frontend Developer",
+    title: "Cloud Developer",
     icon: mobile,
+  },
+  {
+    title: "Full Stack Developer",
+    icon: creator,
   },
 ];
 
 const technologies = [
-  {
-    name: "HTML 5",
-    icon: html,
-  },
-  {
-    name: "CSS 3",
-    icon: css,
-  },
-  {
-    name: "JavaScript",
-    icon: javascript,
-  },
-  {
-    name: "Bootstrap",
-    icon: css,
-  },
-  {
-    name: "jQuery",
-    icon: javascript,
-  },
-  {
-    name: "WordPress",
-    icon: web,
-  },
   {
     name: "Java",
     icon: nodejs,
@@ -113,68 +90,136 @@ const technologies = [
     icon: express,
   },
   {
+    name: "Spring Security",
+    icon: backend,
+  },
+  {
     name: "REST APIs",
     icon: backend,
   },
   {
-    name: "React JS",
+    name: "Microservices",
+    icon: web,
+  },
+  {
+    name: "React",
     icon: reactjs,
   },
   {
-    name: "MySql",
+    name: "Redux",
+    icon: redux,
+  },
+  {
+    name: "JavaScript",
+    icon: javascript,
+  },
+  {
+    name: "TypeScript",
+    icon: javascript,
+  },
+  {
+    name: "PostgreSQL",
     icon: mysql,
+  },
+  {
+    name: "MySQL",
+    icon: mysql,
+  },
+  {
+    name: "MongoDB",
+    icon: mongodb,
+  },
+  {
+    name: "Redis",
+    icon: mongodb,
+  },
+  {
+    name: "Apache Kafka",
+    icon: backend,
+  },
+  {
+    name: "GCP",
+    icon: aws,
+  },
+  {
+    name: "AWS",
+    icon: aws,
+  },
+  {
+    name: "Kubernetes",
+    icon: backend,
+  },
+  {
+    name: "Docker",
+    icon: backend,
+  },
+  {
+    name: "Terraform",
+    icon: backend,
   },
   {
     name: "Git",
     icon: git,
   },
-  {
-    name: "Figma",
-    icon: figma,
-  },
-  {
-    name: "GSAP",
-    icon: gsap,
-  },
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
 ];
 
 const experiences = [
   {
-    title: "Research Assistant - Web Development",
-    company_name: "Western Illinois University",
-    icon: wiu,
-    iconBg: "#1A1A2E",
-    date: "Jan 2025 - May 2025",
+    title: "Java Developer",
+    company_name: "Discover",
+    icon: meta, // Placeholder - replace with Discover logo
+    iconBg: "#FF6B35",
+    date: "November 2024 - Present",
     points: [
-      "Supporting faculty and administration by updating web pages in OU Campus CMS, ensuring content accuracy and accessibility standards.",
-      "Designing tutorial pages and interactive forms for student services, improving user experience and engagement.",
-      "Editing technical documentation and FAQs, maintaining consistency with university branding and voice guidelines.",
-      "Participating in weekly content planning sessions with department heads and marketing staff, aligning web updates with strategic initiatives.",
-      "Created responsive design templates for academic program pages, resulting in 25% increase in student inquiries.",
-      "Designed interactive sitemap navigation structure, improving first-click accuracy for student users by 30%.",
+      "Built and maintained backend microservices using Java Spring Boot to support Discover's Network Authorizations domain.",
+      "Worked on Toolbox, a configuration-management service responsible for hydrating Discover data centers and POP servers globally.",
+      "Developed scheduled batch workflows that publish daily configuration updates to authorization systems worldwide.",
+      "Supported core transaction validation processes, ensuring accurate routing, integrity checks, and fraud detection.",
+      "Deployed services to PCF and managed operational tasks across virtual machine–based environments.",
+      "Integrated backend components with GCP Pub/Sub to enable asynchronous message processing.",
+      "Added system monitoring and logging through Google Cloud Logging, improving visibility into production issues.",
+      "Improved API reliability by refining request handling, error responses, and database interactions.",
+      "Wrote automated unit tests using JUnit 5, helping maintain code quality and stability.",
+      "Participated in Agile/Scrum ceremonies and collaborated with cross-functional teams for feature delivery.",
     ],
   },
   {
-    title: "Web Content & Java Developer",
-    company_name: "Accenture Pvt. Ltd.",
+    title: "Full Stack Java Developer",
+    company_name: "Accenture (Walmart - Remote)",
     icon: accenture,
     iconBg: "#A100FF",
-    date: "Oct 2021 - Aug 2023",
+    date: "October 2021 - August 2023",
     points: [
-      "Managed and updated internal content on corporate intranet using custom CMS and structured content taxonomies, improving content findability by 40%.",
-      "Developed Java-based modules and RESTful APIs to support backend operations for web applications, reducing processing time by 25%.",
-      "Conducted bi-weekly audits to remove ROT (redundant, outdated, trivial) content, streamlining navigation structures and improving user experience.",
-      "Managed content publishing requests from internal teams, coordinating project intake, stakeholder updates, and timeline management for 50+ projects.",
-      "Monitored web traffic via Google Analytics and Search Console; implemented metadata and SEO strategies that reduced bounce rate by 18%.",
-      "Ensured accessibility compliance (WCAG 2.1) and documented SOPs, CMS user manuals, and internal publishing guidelines for non-technical contributors.",
-      "Integrated HTML/CSS enhancements and JavaScript to modernize UI components across multiple portals, enhancing visual consistency.",
-      "Led weekly review meetings with stakeholders to prioritize intranet content updates aligned with campaign timelines and business objectives.",
-      "Optimized multimedia and simplified markup, reducing page load times by 30% and improving overall site performance.",
-      "Led migration of intranet knowledge base to structured taxonomy system, significantly increasing content findability and user satisfaction.",
+      "Developed cloud-native order fulfillment microservices using Java 17 & Spring Boot 3, improving reliability and reducing downtime during peak retail traffic.",
+      "Designed and secured REST APIs with Spring Security & JWT, strengthening authentication and reducing unauthorized access issues.",
+      "Streamlined data persistence by implementing Spring Data JPA and optimized PostgreSQL queries, improving response times for high-volume order lookups.",
+      "Implemented distributed messaging using Kafka, enabling near real-time inventory updates across Walmart's global retail systems.",
+      "Built Pub/Sub event pipelines on GCP, reducing latency for cross-region order status propagation.",
+      "Designed and automated ETL workflows in GCP Composer (Airflow), ensuring timely ingestion and transformation of sales and logistics data.",
+      "Optimized analytics workloads in BigQuery, enabling faster reporting for inventory and fulfillment insights.",
+      "Integrated Redis caching to reduce API read times, improving user-facing dashboard performance.",
+      "Modernized legacy services by migrating them to Cloud Run, lowering operational cost and improving autoscaling behavior.",
+      "Deployed and managed microservices on GKE using Terraform & Helm, standardizing deployments and reducing manual configuration effort.",
+      "Implemented CI/CD pipelines with GitHub Actions, CircleCI & Argo CD, improving release frequency and build reliability.",
+    ],
+  },
+  {
+    title: "Application Developer",
+    company_name: "Charles River Laboratories",
+    icon: shopify, // Placeholder - replace with Charles River logo
+    iconBg: "#1A1A2E",
+    date: "August 2019 - September 2021",
+    points: [
+      "Developed backend components using Java 11 and Spring Boot to support scientific workflows, improving reliability and data throughput.",
+      "Built REST APIs integrating with MongoDB, enabling flexible storage of research datasets and experiment metadata.",
+      "Designed automated ETL workflows using Apache Airflow, reducing manual data processing effort and improving pipeline consistency.",
+      "Implemented ML preprocessing modules using Python and OpenCV, improving accuracy of anomaly detection and image classification tasks.",
+      "Built internal visualization dashboards using D3.js, enabling researchers to analyze experimental trends more efficiently.",
+      "Deployed backend services to AWS EC2, utilizing S3 for secure experiment file storage and retrieval.",
+      "Created batch jobs to validate, enrich, and transform scientific data, improving downstream analytics performance.",
+      "Enhanced code quality by writing unit tests with JUnit, reducing regressions in data-processing logic.",
+      "Tuned APIs and background jobs for performance, ensuring reliable operation during high-volume research workloads.",
+      "Set up monitoring using Prometheus, enabling early detection of performance bottlenecks in lab processing services.",
     ],
   },
 ];
@@ -183,20 +228,11 @@ const education = [
   {
     degree: "Master of Science in Computer Science",
     school_name: "Western Illinois University",
-    location: "Macomb, IL",
+    location: "Macomb, Illinois",
     date: "Aug 2023 - May 2025",
     gpa: "3.6/4.0",
     icon: wiu,
     iconBg: "#1A1A2E",
-  },
-  {
-    degree: "Bachelor of Technology in Electronics and Communication Engineering",
-    school_name: "Vignan University",
-    location: "Guntur, India",
-    date: "June 2017 - Aug 2021",
-    gpa: null,
-    icon: web,
-    iconBg: "#383E56",
   },
 ];
 
@@ -229,78 +265,32 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Campus Portal Redesign",
+    name: "Smart Waste Management & Recycling Tracker",
     description:
-      "Revamped Vignan University's internal student portal as Team Lead, restructuring pages for academics, events, and placements. Built backend integration with MySQL and created admin-level content editing functions. Conducted peer usability testing and coordinated deployment with college IT staff.",
+      "Developed a full-stack web application using Java Spring Boot, React, and MongoDB. Implemented AI-based waste classification using barcode and image recognition. Enabled real-time garbage collection alerts and recycling center mapping. Gamified user participation through an eco-score system and leaderboard. Provided analytics for city officials to monitor recycling habits and performance.",
     tags: [
       {
         name: "Java",
         color: "blue-text-gradient",
       },
       {
-        name: "JSP",
+        name: "Spring Boot",
         color: "white-text-gradient",
       },
       {
-        name: "MySQL",
+        name: "React",
         color: "green-text-gradient",
       },
       {
-        name: "HTML/CSS",
+        name: "MongoDB",
         color: "pink-text-gradient",
+      },
+      {
+        name: "AI/ML",
+        color: "blue-text-gradient",
       },
     ],
     image: project2,
-    source_code_link: "https://github.com/sivasiri",
-  },
-  {
-    name: "Intranet Knowledge Base Migration",
-    description:
-      "Led migration of corporate intranet knowledge base to structured taxonomy system at Accenture, significantly increasing content findability. Optimized multimedia and simplified markup, reducing page load times by 30%. Implemented SEO strategies that reduced bounce rate by 18%.",
-    tags: [
-      {
-        name: "CMS",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "SEO",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Analytics",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "Accessibility",
-        color: "white-text-gradient",
-      },
-    ],
-    image: gearXpert,
-    source_code_link: "https://github.com/sivasiri",
-  },
-  {
-    name: "Academic Program Pages - Responsive Templates",
-    description:
-      "Created responsive design templates for academic program pages at Western Illinois University, leading to 25% increase in student inquiries. Designed interactive sitemap navigation structure improving first-click accuracy for student users. Updated web pages in OU Campus CMS with focus on accessibility and user experience.",
-    tags: [
-      {
-        name: "OU Campus",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Responsive Design",
-        color: "white-text-gradient",
-      },
-      {
-        name: "UX Design",
-        color: "green-text-gradient",
-      },
-      {
-        name: "CMS",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: project3,
     source_code_link: "https://github.com/sivasiri",
   },
 ];
