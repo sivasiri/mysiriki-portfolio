@@ -87,7 +87,7 @@ const Contact = () => {
 
     if (!serviceId || !templateId || !publicKey) {
       showNotification(
-        "Email service is not configured. Please contact me directly via email or phone.",
+        "Muddi muskoni call chey leda email chey",
         "error"
       );
       return;
