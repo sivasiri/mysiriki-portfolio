@@ -73,19 +73,41 @@ const Contact = () => {
     return true;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     
     if (!validateForm()) {
       return;
     }
 
+    // Check if EmailJS is configured
+    const serviceId = import.meta.env.VITE_APP_EMAILJS_SERVICE_ID;
+    const templateId = import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY;
+
+    if (!serviceId || !templateId || !publicKey) {
+      showNotification(
+        "Email service is not configured. Please contact me directly via email or phone.",
+        "error"
+      );
+      return;
+    }
+
     setLoading(true);
 
-    emailjs
-      .send(
-        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+    // Add timeout to prevent infinite loading
+    const timeoutId = setTimeout(() => {
+      setLoading(false);
+      showNotification(
+        "Request timed out. Please try again or contact me directly.",
+        "error"
+      );
+    }, 30000); // 30 second timeout
+
+    try {
+      await emailjs.send(
+        serviceId,
+        templateId,
         {
           from_name: form.name,
           to_name: personalData.name,
@@ -93,30 +115,35 @@ const Contact = () => {
           to_email: personalData.email,
           message: form.message,
         },
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
-      )
-      .then(
-        () => {
-          setLoading(false);
-          showNotification(
-            `Thanks ${form.name}! I'll get back to you soon. ✨`,
-            "success"
-          );
-          setForm({
-            name: "",
-            email: "",
-            message: "",
-          });
-        },
-        (error) => {
-          setLoading(false);
-          console.error(error);
-          showNotification(
-            "Oops! Something went wrong. Please try again or contact me directly.",
-            "error"
-          );
-        }
+        publicKey
       );
+
+      clearTimeout(timeoutId);
+      setLoading(false);
+      showNotification(
+        `Thanks ${form.name}! I'll get back to you soon. ✨`,
+        "success"
+      );
+      setForm({
+        name: "",
+        email: "",
+        message: "",
+      });
+    } catch (error) {
+      clearTimeout(timeoutId);
+      setLoading(false);
+      console.error("EmailJS Error:", error);
+      
+      let errorMessage = "Oops! Something went wrong. Please try again or contact me directly.";
+      
+      if (error.text) {
+        errorMessage = `Error: ${error.text}. Please check your EmailJS configuration.`;
+      } else if (error.message) {
+        errorMessage = `Error: ${error.message}`;
+      }
+      
+      showNotification(errorMessage, "error");
+    }
   };
 
   return (
