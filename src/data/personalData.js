@@ -9,7 +9,7 @@ export const personalData = {
   phone: "+1 (309) 315-8067",
 
   github: "https://github.com/sivasiri",
-  linkedin: "https://www.linkedin.com/in/siva-siriki-09261716b/",
+  linkedin: "https://www.linkedin.com/in/surya-sai-s-09261716b/",
   portfolio: "https://mysiriki.com",
   resumeLink: "https://drive.google.com/YOUR-PUBLIC-RESUME-LINK", // optional
 
